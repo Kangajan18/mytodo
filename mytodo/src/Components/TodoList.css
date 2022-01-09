@@ -1,0 +1,10 @@
+.TodoList {
+  background-color: rgba(255 255 0 / 36%);
+  width: 80%;
+  margin: auto;
+  border-radius: 20px;
+}
+.TodoList h2 {
+  text-align: left;
+  margin: 14px 10px 12px 10px;
+}

@@ -9,6 +9,7 @@ const TodoItem = (props) => {
     setIsChecked(!isChecked);
     console.log("checked clicked" + isChecked);
   };
+
   return (
     <Card className={`Todo-item ${isChecked ? "checked" : ""}`}>
       <div className="Todo-item__time">
@@ -23,8 +24,10 @@ const TodoItem = (props) => {
         </button>
         <button
           className="btn btn-danger"
-          onClick={() => {
+          disabled={!isChecked === true ? "disabled" : ""}
+          onClick={(e) => {
             props.onRemove(props.index);
+            setIsChecked(false);
           }}
         >
           Delete
